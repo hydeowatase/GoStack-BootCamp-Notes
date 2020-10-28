@@ -1,4 +1,5 @@
 const express  = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const requireDir =  require("require-dir");
 
@@ -7,6 +8,7 @@ const app = express();
 
 //Permite que evie dados pára aplicação em formato de json
 app.use(express.json());
+app.use(cors());
 
 //Starting  DATA BASE
 mongoose.connect(
